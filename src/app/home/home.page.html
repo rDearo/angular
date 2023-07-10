@@ -1,22 +1,112 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content id="body">
+  <ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-row id="view">
+      <ion-grid>
+          <ion-row class="linha-conta">
+            <h2 id="conta">{{ this.contaExibicao }}</h2>
+          </ion-row>
+    
+          <ion-row class="linha-resposta">
+            <h1 id="resposta">={{ this.resultado }}</h1>
+          </ion-row>
+      </ion-grid>
+    </ion-row>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+
+
+    <ion-row class="linha-botao">
+      <ion-col>
+        <ion-button (click)="entradaDeComando(7)" expand="full" fill="clear">7</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando(8)" expand="full" fill="clear">8</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando(9)" expand="full" fill="clear">9</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando('/')" expand="full" fill="clear" class="no-number">÷</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row class="linha-botao">
+      <ion-col>
+        <ion-button (click)="entradaDeComando(4)" expand="full" fill="clear">4</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando(5)" expand="full" fill="clear">5</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button  (click)="entradaDeComando(6)"expand="full" fill="clear">6</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando('*')" expand="full" fill="clear" class="no-number">x</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    
+    <ion-row class="linha-botao">
+      <ion-col>
+        <ion-button (click)="entradaDeComando(1)" expand="full" fill="clear">1</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando(2)" expand="full" fill="clear">2</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando(3)" expand="full" fill="clear">3</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando('+')" expand="full" fill="clear" class="no-number">+</ion-button>
+      </ion-col>
+    </ion-row>
+
+    
+
+    <ion-row class="linha-botao">
+      <ion-col>
+        <ion-button (click)="entradaDeComando(0)" expand="full" fill="clear">0</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando('.')" expand="full" fill="clear" class="no-number">,</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando('%')" expand="full" fill="clear" class="no-number">%</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button (click)="entradaDeComando('-')" expand="full" fill="clear" class="no-number">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    
+    <ion-row class="linha-botao">
+      <ion-col size="3">
+        <ion-button (click)="deletarUltimoDigito()" expand="full" fill="clear" class="no-number">↵</ion-button>
+      </ion-col>
+  
+      <ion-col size="3">
+        <ion-button (click)="AllClear()" expand="full" fill="clear" class="no-number">AC</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="calcular()" expand="full" fill="clear" class="no-number">=</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
